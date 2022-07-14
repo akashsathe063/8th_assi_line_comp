@@ -3,6 +3,7 @@ package com.blz.Line_comp;
 import java.util.Scanner;
 
 import static java.lang.Math.sqrt;
+
 public class LineComparision {
     static int x1;
     static int y1;
@@ -11,16 +12,18 @@ public class LineComparision {
 
     public static void main(String[] args) {
         System.out.println("Welcome to line comparision computation");
-        LineComparision line1 = new LineComparision();
         LineComparision line2 = new LineComparision();
-        Integer Line1 = Integer.valueOf(line1.length_of_line());
-        System.out.println("length of first line: "+Line1);
+        Integer Line1 = Integer.valueOf(line2.length_of_line());
+        System.out.println("length of first line: " + Line1);
         Integer Line2 = Integer.valueOf(line2.length_of_line());
-        System.out.println("length of second line: "+Line2);
-        if (Line1.equals(Line2)) {
-            System.out.println("length of two line are same");
+        System.out.println("length of second line: " + Line2);
+        Integer compare = Line1.compareTo(Line2);
+        if (compare.equals(-1)) {
+            System.out.println(" line1 is less than line2");
+        } else if (compare.equals(1)) {
+            System.out.println("line1 is greater than line2");
         } else {
-            System.out.println("length of two line are not same");
+            System.out.println("line1 and line2 are equals");
         }
     }
 
